@@ -11,4 +11,17 @@ else
   echo "✓ mmk-cn already exists"
 fi
 
+# Check API keys
+if [ -n "$GEMINI_API_KEY" ]; then
+  echo "✓ GEMINI_API_KEY is set"
+else
+  echo "⚠ GEMINI_API_KEY is not set (AI image generation will be unavailable)"
+fi
+
+if [ -n "$ANTHROPIC_API_KEY" ]; then
+  echo "✓ ANTHROPIC_API_KEY is set"
+else
+  echo "⚠ ANTHROPIC_API_KEY is not set"
+fi
+
 exit 0
